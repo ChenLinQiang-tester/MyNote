@@ -1,0 +1,63 @@
+{
+    "generalPurposeCard": {
+        "layout": {
+            "cardOrientation": "VERTICAL",
+            "cardWidth": "MEDIUM_WIDTH"
+        },
+        "content": {
+            "media": {
+                "mediaUrl": "http://oss.fontdo.com/96a66d55f2564ed2b4b2cea6fd125e54.jpg",
+                "mediaContentType": "image/jpg",
+                "thumbnailUrl": "http://oss.fontdo.com/96a66d55f2564ed2b4b2cea6fd125e54.jpg",
+                "thumbnailContentType": "image/jpg",
+                "height": "MEDIUM_HEIGHT"
+            },
+            "title": "广东蜂动科技有限公司",
+            "description": "蜂动科技是一家专注于5G消息产品和业务创新的公司。通过Al技术，构建自由、智能的通信服务。点击下方按钮或输入“5G消息体验”开始进行H5 chatbot体验！",
+            "suggestions": [
+                {
+                    "action": {
+                        "displayText": "访问官网",
+                        "urlAction": {
+                            "openUrl": {
+                                "url": "https://www.fontdo.com/#/home",
+                                "application": "webview",
+                                "viewMode": "full"
+                            }
+                        }
+                    }
+                },
+                {
+                    "reply": {
+                        "displayText": "联系我们",
+                        "postback": {
+                            "data": "联系我们"
+                        }
+                    }
+                },
+                {
+                    "reply": {
+                        "displayText": "5G消息体验",
+                        "postback": {
+                            "data": "5G消息体验"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "menu": [
+        {
+            "reply": {
+                "displayText": "注册5G消息账号",
+                "postback": {
+                    "data": "我要加入"
+                }
+            }
+        }
+    ],
+    "fallToSms": {
+        "linkType": "MESSAGE_LINK",
+        "text": "您好，5G应用消息通过H5链接方式发出，点击链接："
+    }
+}

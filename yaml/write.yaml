@@ -1,0 +1,26 @@
+case_common:
+  allureEpic: 开发平台接口
+  allureFeature: 收藏模块
+  allureStory: 收藏网址接口
+collect_addtool_01:
+  host: ${{host}}
+  url: /lg/collect/addtool/json
+  method: POST
+  detail: 新增收藏网址接口
+  headers:
+    Content-Type: multipart/form-data;
+    cookie: $cache{login_cookie}
+  requestType: date
+  is_run: null
+  data:
+    name: 自动化生成收藏网址${{random_int}}
+    link: https://gitee.com/yu_xiao_qi/pytest-auto-api2
+  dependence_case: false
+  dependence_case_data: null
+  assert:
+    errorCode:
+      jsonpath: $.errorCode
+      type: ==
+      value: 0
+      AssertType: null
+  sql: null

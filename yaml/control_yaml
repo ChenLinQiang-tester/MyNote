@@ -1,0 +1,29 @@
+import yaml   # https://www.cnblogs.com/hls-code/p/15349139.html
+
+
+def get_yaml_data(yaml_file):
+    # 1.打开yaml文件,读取数据为str对象(json字符串)
+    with open(yaml_file, 'r', encoding="utf-8") as f:
+        file_data = f.read()
+    # 2.将字符串转化为字典或列表，反序列化-->load
+    data = yaml.load(file_data, Loader=yaml.FullLoader)
+    return data
+
+
+yaml_path = 'data.yaml'
+dict_data = get_yaml_data(yaml_path)
+print(dict_data)
+
+
+def write_yaml_data(data):
+    with open("write.yaml", "w", encoding="utf-8") as f:
+        # 将字典或列表转化为yaml文件内容，序列化-->dump
+        yaml.dump(data, f, encoding="utf-8", allow_unicode=True, sort_keys=False)
+
+
+write_yaml_data(dict_data)
+
+with open('data.yaml', encoding='utf-8') as f:
+    data = yaml.scan(f, Loader=yaml.FullLoader)
+    for token in data:
+        print(token)
