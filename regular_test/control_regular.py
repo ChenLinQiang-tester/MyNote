@@ -1,3 +1,5 @@
+# https://www.cnblogs.com/shenjianping/p/11647473.html
+
 import re
 
 
@@ -45,9 +47,9 @@ def aa():
     print(re.compile(pattern=pattern).pattern)
     print(re.compile(pattern=pattern).search('vv'))
 
-import re
-print(re.match('www', 'www.runoob.com').span())  # 在起始位置匹配
-print(re.match('com', 'www.runoob.com'))
+# import re
+# print(re.match('www', 'www.runoob.com').span())  # 在起始位置匹配
+# print(re.match('com', 'www.runoob.com'))
 
 
 if __name__ == '__main__':
